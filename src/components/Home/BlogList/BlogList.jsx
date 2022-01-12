@@ -1,11 +1,12 @@
 import React from 'react'
-import Blog from '../../../pages/blog/Blog'
 import BlogItem from './BlogItem/BlogItem'
 
 import './BlogList.css'
 
 const BlogList = ({ blogs }) => (
  <div className='blogList-wrap'>
+
+   {/* Mapping through the blogs set in state "Home.jsx" and receiving each blog from Data.js  */}
   {blogs.map(blog => (
    <BlogItem blog={blog} key={blog.id} />
    ))}  

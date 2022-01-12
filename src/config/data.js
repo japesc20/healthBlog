@@ -1,9 +1,7 @@
-const linebreak = document.createElement("br");
-
 const Data = [
  {
   id: 1,
-  title: 'Background and History',
+  title: 'Welcome',
   category: 'fitness',
   subCategory: ['exercise', 'diet', 'health'],
   description: 
@@ -15,7 +13,7 @@ const Data = [
   },
   {
     id: 2,
-    title: 'The second post',
+    title: 'Background and History',
     category: 'fitness',
     subCategory: ['exercise', 'diet', 'health'],
     description: 
@@ -27,7 +25,7 @@ const Data = [
   },
   {
     id: 3,
-    title: 'The third post of health',
+    title: 'The Beginning... Again',
     category: 'diet',
     subCategory: ['exercise', 'diet', 'health'],
     description: 

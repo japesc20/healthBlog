@@ -9,10 +9,14 @@ import './Blog.css'
 
 
 const Blog = () => {
+
+    // 1. useParams initates the use of ID for specific blog / 2. Setting state for individual blogs id's
     const {id} = useParams();
     const [blog, setBlog] = useState(null)
 
     useEffect(() => {
+
+        // Var. defined that blog is equal to the blog id clicked
         let blog = Data.find(blog => blog.id === parseInt(id));
         if (blog) {
             setBlog(blog)
@@ -29,6 +33,8 @@ const Blog = () => {
                         <p className="blog-date">Published {blog.createdAt}</p>
                         <h1>{blog.title}</h1>
                         <div className="blog-subCategory">
+
+                            {/* Maps through the subCategory properties and displays in <Chip /> */}
                             {blog.subCategory.map((category, index) => 
                             <div>
                                 <Chip key={index} label={category} />

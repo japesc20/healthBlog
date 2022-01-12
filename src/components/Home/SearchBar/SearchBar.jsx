@@ -3,6 +3,7 @@ import React from 'react'
 import './SearchBar.css'
 
 
+// Parameters set in Home.jsx
 const SearchBar = ({ value, handleSearchKey, clearSearch, formSubmit }) => ( 
         <div className='searchBar-wrap'>
             <form onSubmit={formSubmit}>

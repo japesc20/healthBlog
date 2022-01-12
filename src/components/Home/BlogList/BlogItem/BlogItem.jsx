@@ -4,7 +4,7 @@ import Chip from '../../../common/Chip/Chip'
 
 import './BlogItem.css'
 
-
+// Variable set to identify each property inside the array of blog objects "Data.js"
 const BlogItem = ({ 
   blog: { 
     id,

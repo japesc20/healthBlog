@@ -17,9 +17,11 @@ const Home = () => {
         handleSearchResults();
     }
 
-    // Search for blogs by category
+    // Search for blogs by category or title
     const handleSearchResults = () => {
         const allBlogs = Data;
+
+        // Filter through all blogs to recognize either category or title
         const filteredBlogs = allBlogs.filter((blog) => 
             blog.category.toLowerCase().includes(searchKey.toLowerCase().trim()) ||
             blog.title.toLowerCase().includes(searchKey.toLowerCase().trim())
@@ -27,6 +29,7 @@ const Home = () => {
         setBlogs(filteredBlogs);
     };
 
+    // function for clearing search
     const handleClearSearch = () => {
         setBlogs(Data);
         setSearchKey('')
@@ -36,6 +39,7 @@ const Home = () => {
         <div>
             {/* Page header */}
             <Header />
+
             {/* Search Bar */}
             <SearchBar 
                 value={searchKey}
@@ -43,6 +47,7 @@ const Home = () => {
                 formSubmit={handleSearchSubmit}
                 handleSearchKey={(e) => setSearchKey(e.target.value)} 
             />
+            
             {/* Blog List / Empty List */}
             {!blogs.length ? <EmptyList /> : <BlogList blogs={blogs} />}
         </div>
