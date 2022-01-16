@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import Data from '../../config/data'
 import Chip from '../../components/common/Chip/Chip'
 import EmptyList from '../../components/common/EmptyList/EmptyList'
@@ -46,7 +47,7 @@ const Blog = () => {
                     </header>
                     <img src={blog.cover} alt="cover" />
                     <p className="blog-desc">
-                        <ReactMarkdown children={blog.description} components={{h1: 'h2'}} />
+                        <ReactMarkdown  className='react-markdown' remarkPlugins={[remarkGfm]} children={blog.description} />
                     </p>
                 </div> : (
                     <EmptyList />

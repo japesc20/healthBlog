@@ -8,7 +8,7 @@ import './BlogItem.css'
 const BlogItem = ({ 
   blog: { 
     id,
-    description,
+    previewDescription,
     title,
     createdAt,
     authorName,
@@ -21,7 +21,7 @@ const BlogItem = ({
    <img src={cover} alt="cover" className='blogItem-cover'/>
    <Chip label={category} />
    <Link to={`/blog/${id}`} className='blogItem-title-link'><h3>{title}</h3></Link>
-   <p className='blogItem-desc'>{description}</p>
+   <p className='blogItem-desc'>{previewDescription}</p>
 
    <footer>
      <div className="blogItem-author">
