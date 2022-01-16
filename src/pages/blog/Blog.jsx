@@ -48,7 +48,13 @@ const Blog = () => {
                     <img src={blog.cover} alt="cover" />
                     <p className="blog-desc">
                         <ReactMarkdown  className='react-markdown' remarkPlugins={[remarkGfm]} children={blog.description} />
+                        <hr />
                     </p>
+                    <div className="footer">
+                        <img src={blog.authorAvatar} />
+                        <h4>{blog.authorName}</h4>
+                        <p>"This will be my footer quote!"</p>
+                    </div>
                 </div> : (
                     <EmptyList />
                 )
