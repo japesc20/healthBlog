@@ -53,7 +53,7 @@ const Blog = () => {
                     <div className="footer">
                         <img src={blog.authorAvatar} />
                         <h4>{blog.authorName}</h4>
-                        <p>"This will be my footer quote!"</p>
+                        <p>"It's not always about intensity but consistency."</p>
                     </div>
                 </div> : (
                     <EmptyList />
